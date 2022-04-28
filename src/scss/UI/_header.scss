@@ -1,0 +1,197 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__heading {
+    font-weight: bold;
+    text-transform: lowercase;
+}
+.header__img {
+    cursor: pointer;
+}
+@media (max-width: v.$desktop) {
+    .header__nav {
+        display: none;
+    }
+    .header__btns {
+        display: none;
+    }
+
+}
+@include m.desktop {
+    .header {
+        display: grid;
+        grid-template-columns: repeat(20, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+        &__img {
+            display: none;
+        }
+        &__link {
+            width: 13rem;
+            
+
+            img {
+                display: inline-block;
+                margin-left: 2rem;
+            }
+        }
+        &__nav {
+            grid-column: 3 / 10;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2rem;
+
+            @include m.desktopXl {
+                margin-bottom: 0;
+            }
+            a {
+                
+                color: v.$gris;
+                transition: color 0.5s;
+                &:hover {
+                    
+                    color: v.$negro;
+                }
+            }
+        }
+        &__btns {
+            grid-column: 15 / 19;
+            display: flex;
+            justify-content: space-evenly;
+            gap: 8rem;
+            color: v.$gris;
+            
+        }
+        &__btn {
+            cursor: pointer;
+            transition: color 0.5s;
+            &:hover {
+                color: v.$negro;
+            }
+        }
+        &__btn:nth-child(2) {
+            border: 2px solid v.$gris;
+            padding: 1.5rem 3rem;
+            border-radius: 1.5rem;
+
+            &:hover {
+                border: 2px solid v.$negro;
+            }
+            
+        }
+        &__list {
+            animation: growDown 300ms ease-in-out forwards;
+            transform-origin: top center;
+            color: v.$gris;
+            grid-column: 2 / 4;
+            grid-row: 2 / 4;
+            width: 17rem;
+            height: 100%;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li {
+                a {
+                    color: v.$gris;
+                }
+                padding: 1rem 1rem;
+
+                &:nth-child(1):before {
+                    content: "";
+                    display: inline-block;
+                    width: 2rem;
+                    height: 2rem;
+                    background-image: url("../img/icon-todo.svg");
+                    background-repeat: no-repeat;
+                    position: relative;
+                    left: -1rem;
+                    bottom: -0.5rem;
+                }
+                &:nth-child(2):before {
+                    content: "";
+                    display: inline-block;
+                    width: 2rem;
+                    height: 2rem;
+                    background-image: url("../img/icon-calendar.svg");
+                    background-repeat: no-repeat;
+                    position: relative;
+                    left: -1rem;
+                    bottom: -0.5rem;
+                }
+                &:nth-child(3):before {
+                    content: "";
+                    display: inline-block;
+                    width: 2rem;
+                    height: 2rem;
+                    background-image: url("../img/icon-reminders.svg");
+                    background-repeat: no-repeat;
+                    position: relative;
+                    left: -1rem;
+                    bottom: -0.5rem;
+                }
+                &:nth-child(4):before {
+                    content: "";
+                    display: inline-block;
+                    width: 2rem;
+                    height: 2rem;
+                    background-image: url("../img/icon-planning.svg");
+                    background-repeat: no-repeat;
+                    position: relative;
+                    left: -1rem;
+                    bottom: -0.5rem;
+                }
+            }
+        }
+        &__list2 {
+            animation: growDown 300ms ease-in-out forwards;
+            transform-origin: top center;
+            color: v.$gris;
+            grid-column: 5 / 7;
+            grid-row: 2 / 4;
+            width: 13rem;
+            height: 80%;
+            align-self: flex-start;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                padding: 1rem 0 1rem 2rem;
+
+                a {
+                    color: v.$gris;
+                }
+            }
+        }
+    }   
+}
+@keyframes growDown {
+
+    0% {
+  
+      transform: scaleY(0)
+  
+    }
+  
+    80% {
+  
+      transform: scaleY(1.1)
+  
+    }
+  
+    100% {
+  
+      transform: scaleY(1)
+  
+    }
+  
+  }

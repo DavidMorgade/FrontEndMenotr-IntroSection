@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <script defer src="build/js/app.js"></script>
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="build/img/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <link rel="stylesheet" href="build/css/app.css">
+</head>
+  <body>
+    <header class="header containerXl">
+      <h1 class="header__heading">Snap</h1>
+      <div class="header__img">
+        <img id="header-img" src="build/img/icon-menu.svg" alt="icono menu">
+      </div>
+      <div id="loading" class="modal__phone hidden">
+        <img class="modal__phone--close" src="build/img/icon-close-menu.svg" alt="">
+        <div class="modal__list">
+          <a id="modal__phone--features" href="#">Features<img class="modal__list--img" src='build/img/icon-arrow-down.svg' alt=""></a>
+          <div class="modal__popup hiddenModal">
+            <ul>
+              <li> <img class="modal__popup--icon" src="build/img/icon-todo.svg" alt=""> <a href="#">Todo list</a></li>
+              <li><img class="modal__popup--icon" src="build/img/icon-calendar.svg" alt=""> <a href="#">calendar</a></li>
+              <li><img class="modal__popup--icon" src="build/img/icon-reminders.svg" alt=""> <a href="#">reminders</a></li>
+              <li><img class="modal__popup--icon" src="build/img/icon-planning.svg" alt=""> <a href="#">planning</a></li>
+            </ul>
+          </div>
+          <a id="modal__phone--company" href="#">Company<img class="modal__list--img" id="phone__modal--arrow" src='build/img/icon-arrow-down.svg' alt=""></a>
+          <div class="modal__popup2 hiddenModal" id="modal-popup">
+            <ul>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <a href="#">Carrers</a>
+          <a href="#">About</a>
+        </div>
+      </div>
+      <nav class="header__nav">
+        <a class="header__link" href="#">Features <img id="arrowimg" src='build/img/icon-arrow-down.svg' alt=""></a>
+        <a class="header__link" href="#">Company <img id="arrowimg2" src='build/img/icon-arrow-down.svg' alt=""> </a>
+        <a class="header__link" href="#">Careers</a>
+        <a class="header__link" href="#">About</a>
+      </nav>
+      <div class="header__list hidden">
+        <ul>
+          <li><a href="#">Todo List</a></li>
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">Reminders</a></li>
+          <li><a href="#">Planning</a></li>
+        </ul>
+      </div>
+      <div class="header__list2 hidden">
+        <ul>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="header__btns">
+        <button class="header__btn">Login</button>
+        <button class="header__btn">Register</button>
+      </div>
+    </header>
+    <main class="containerXl main">
+      <div class="main__img mg-top-5">
+        <img class="main__imgSrc" src="build/img/image-hero-mobile.png" alt="hero img">
+      </div>
+      <div class="main__desc mg-top-5">
+        <h1 class="main__title">
+          Make <span>remote work</span> 
+        </h1>
+        <div class="main__text--cont">
+          <p class="main__text">
+            Get your team in sync, no matter your location. Steamline precesses create team rituals, and watch productivity soar.
+          </p>
+          
+        </div>
+        <div class="main__btn">
+          <button class="main__btn-extra">
+            Learn more
+          </button>
+        </div>
+        <div class="main__icons mg-top-10">
+          <div class="main__icon">
+            <img src="build/img/client-databiz.svg" alt="databiz icon">
+          </div>
+          <div class="main__icon">
+            <img src="build/img/client-audiophile.svg" alt="audiophile icon">
+          </div>
+          <div class="main__icon">
+            <img src="build/img/client-meet.svg" alt="client meet icon">
+          </div>
+          <div class="main__icon">
+            <img  src="build/img/client-maker.svg" alt="client maker">
+          </div>
+      </div>
+    </main>
+
+  </body>
+</html>
